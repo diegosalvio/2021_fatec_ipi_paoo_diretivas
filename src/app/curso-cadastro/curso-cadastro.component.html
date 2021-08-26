@@ -1,0 +1,25 @@
+<div class="col-md-6">
+    <div class="form-group">
+        <label for="nomeCursoInput">Nome do Curso</label>
+        <input type="text" class="form-control" id="nomeCursoInput" #nomeCursoInput>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label for="duracaoInput">Duração da aula</label>
+        <input type="text" class="form-control" id="duracaoInput" #duracaoInput>
+    </div>
+</div>
+
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label for="nomeProfessorInput">Nome do Professor</label>
+        <input type="text" class="form-control" id="nomeProfessorInput" #nomeProfessorInput>
+    </div>
+</div>
+
+<div class="mt-2 col-12">
+    <button (click)="adicionar(nomeCursoInput.value, duracaoInput.value, nomeProfessorInput.value)" class="w-100 btn btn-outline-primary" type="button">Cadastrar Curso</button>
+</div>

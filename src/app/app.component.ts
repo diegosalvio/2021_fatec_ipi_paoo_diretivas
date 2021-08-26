@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'exer2';
+  esconder = false
+  textoBotao = 'Esconder'
+
+  cursos = [
+    {nomeCurso: 'Português', duracao: '4hs/aula', nomeProfessor: "Jesiane Silva"},
+    {nomeCurso: 'Matemática', duracao: '4hs/aula', nomeProfessor: "Elder Barros"},
+    {nomeCurso: 'Informática', duracao: '4hs/aula', nomeProfessor: "Gleici Matos"}
+  ]
+
+  onCursoAdicionado (curso){
+    this.cursos = [curso, ...this.cursos]
+  }
+
+  alterarExibicao(){
+    this.textoBotao = this.esconder ? "Exibir" : "Esconder"
+    this.esconder =!this.esconder
+  }
+
 }
